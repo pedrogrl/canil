@@ -1,6 +1,13 @@
 import { Request, Response } from "express";
 
-export const search = (req: Request, res: Response) => {
+import { Pet } from "../models/pet";
 
-   // res.render('pages/search')
+export const search = (req: Request, res: Response) => {
+   let query: string = req.query.q as string // form url
+
+   res.render('pages/page', {
+      menu: '',
+      list: Pet.getFromName(query),
+      query
+   })
 }

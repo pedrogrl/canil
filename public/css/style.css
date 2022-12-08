@@ -84,7 +84,7 @@ h2 {
 }
 
 .no-list {
-    margin-bottom: 50px;
+    margin: 50px auto;
 }
 .list {
     display: grid;
